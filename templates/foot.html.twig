@@ -1,0 +1,48 @@
+{% if app.user %}
+        {% if is_granted('ROLE_ADMIN') %}
+            {% set colorName = "#FFC107" %}
+        {% else %}
+            {% set colorName = "#DAE0E9" %}
+        {% endif %}
+    {% else %}
+        {% set colorName = "#DAE0E9" %}
+    {% endif %}
+
+<footer class="" style="background-color:{{colorName}};">
+    <div class="container_footer">
+    <div class="fiche_info">
+        <section>
+            <h3>Fiche</h3>
+            <ul>
+                <li>qui sommes-nous</li>
+                <li> nos adresses </li>
+            </ul>
+        </section>
+    </div>
+    <div class="fiche_actualité">
+        <section>
+            <h3>Actualité</h3>
+            <ul>
+                <li>qui sommes-nous</li>
+                <li> nos adresses </li>
+            </ul>
+        </section>
+    </div>
+    <div class="fiche_Contact">
+        <section>
+            <h3>Contacter-nous</h3>
+            <ul>
+                <li><a class="logos" href="https://www.facebook.com/"><i data-feather="facebook"></i></a></li>
+                <li><a class="logos" href="https://www.twitter.com/"><i data-feather="twitter"></i></a></li>
+                <li><a class="logos" href="https://www.instagram.com/"><i data-feather="instagram"></i></a></li>
+            </ul>
+        </section>
+    </div>
+   
+        
+
+
+
+    </div>
+
+</footer>

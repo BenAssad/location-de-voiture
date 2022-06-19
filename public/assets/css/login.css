@@ -1,0 +1,162 @@
+*{
+
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+body{
+
+    height: 100vh;
+}
+
+h2{
+
+    font-size: 36px;
+    text-transform: uppercase;
+    color: #595959;
+}
+
+
+
+.container1{
+
+
+    
+    height: 600px;
+    width: 1000px;
+    border-radius: 18px;
+    box-shadow: 0 4px 40px rgb(0 0 0 / 15%);
+    margin: auto;
+    display: flex;
+}
+
+.container2{
+
+
+    
+    height: 600px;
+    width: 500px;
+    border-top-right-radius: 18px;
+    border-bottom-right-radius: 18px;
+    
+}
+
+.container3{
+
+    background-color: #dae0e9;
+    height: 600px;
+    width: 500px;
+    border-top-left-radius: 18px;
+    border-bottom-left-radius: 18px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+
+
+.ride-line {
+    position: relative;
+    text-align: center;
+    margin-top: 20px;
+    margin-bottom: 32px;
+}
+
+.ride-line span {
+    background-color: #fff;
+    padding-left: 12px;
+    padding-right: 12px;
+    display: inline-block;
+    line-height: 24px;
+    position: relative;
+    z-index: 1;
+    color: #747487;
+}
+
+.ride-line::before {
+    content: '';
+    height: 1px;
+    width: 100%;
+    position: absolute;
+    left: 0;
+    top: 12px;
+    background-color: #ededf4;
+}
+
+.icon-group{
+
+    display: flex;
+    justify-content: space-evenly;
+
+}
+
+.miniIcon{
+
+    border: 1px solid rgba(82,82,128,0.09);
+    height: 50px;
+    width: 60px;
+    padding-top: 5px;
+    border-radius: 16px;
+
+
+}
+
+
+.miniIcon:hover{
+
+    background-color: rgba(82,82,128,0.09);
+
+}
+
+.imgG{
+
+    height: 30px;
+    width: 30px;
+    padding-top: 2px;
+}
+
+@media only screen and (max-width: 1020px) {
+    
+
+    .container3{
+
+        display: none;
+    }
+
+    .container2{
+
+        width: 1000px;
+        height: 100vh;
+       
+    }
+
+    .container1{
+
+        height: 100vh;
+    }
+
+    h1{
+
+        display: none;
+    }
+}
+
+@media only screen and (max-width: 500px){
+
+
+    .container2{
+
+        width: 800px;
+        height: 100vh;
+       
+    }
+
+
+    .container1{
+
+        width: 800px;
+    }
+}

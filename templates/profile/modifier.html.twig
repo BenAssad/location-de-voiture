@@ -1,0 +1,10 @@
+{% extends "base.html.twig" %}
+{% block title %}{% endblock %}
+{% block body %}
+    <div class="form">
+        {{ form_start(formProfile)}}
+            {{ form_row(formProfile)}}
+            <input type="submit" value="Modifier" class="btn btn-success">
+        {{ form_end(formProfile)}}
+    </div>
+{% endblock %}

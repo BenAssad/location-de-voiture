@@ -1,0 +1,29 @@
+{% extends "base.html.twig" %}
+
+{% block body %}
+    <a class="btn btn-secondary" href="{{path('app_vehicule')}}">Retour</a>
+    <div class="card text-center w-50 mx-auto">
+        <div class="vimage">
+            {% if vehicules.image|length > 0 %}
+                    
+                <img class="detImg" src="{{ asset('images/upload/' ~ vehicules.image[0].nomImg) }}" alt="">
+
+                {% else %}
+                    <img class="detImg" src="{{ asset('images/index.png') }}" alt=""> 
+                    
+                {% endif %}
+        </div>
+        <div class="card-body">
+            <h5>{{vehicules.description}}</h5>
+            <h5>{{vehicules.categorie.nom}}</h5>
+            <h5>
+                {% if vehicules.prix %}
+                    {{vehicules.prix}} € / j
+                {% else %}
+                    N.R
+                {% endif %}
+            </h5>
+        </div>
+        <a class="btn btn-secondary" href="{{path('app_location_new', {'id': vehicules.id})}}">Louer</a>
+    </div>
+{% endblock %}

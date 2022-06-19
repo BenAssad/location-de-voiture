@@ -1,0 +1,45 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Location index{% endblock %}
+
+{% block body %}
+    <h1>Location index</h1>
+
+    <table class="table">
+        <thead>
+            <tr>
+                <th>Id</th>
+                <th>EmpruntAt</th>
+                <th>RenduAt</th>
+                <th>Rendu</th>
+                <th>Lieulocation</th>
+                <th>Lieurendu</th>
+                <th>Prolongation</th>
+                <th>actions</th>
+            </tr>
+        </thead>
+        <tbody>
+        {% for location in locations %}
+            <tr>
+                <td>{{ location.id }}</td>
+                <td>{{ location.empruntAt ? location.empruntAt|date('Y-m-d H:i:s') : '' }}</td>
+                <td>{{ location.renduAt ? location.renduAt|date('Y-m-d H:i:s') : '' }}</td>
+                <td>{{ location.rendu }}</td>
+                <td>{{ location.lieulocation }}</td>
+                <td>{{ location.lieurendu }}</td>
+                <td>{{ location.prolongation ? location.prolongation|date('Y-m-d H:i:s') : '' }}</td>
+                <td>
+                    <a href="{{ path('app_location_show', {'id': location.id}) }}">show</a>
+                    <a href="{{ path('app_location_edit', {'id': location.id}) }}">edit</a>
+                </td>
+            </tr>
+        {% else %}
+            <tr>
+                <td colspan="8">no records found</td>
+            </tr>
+        {% endfor %}
+        </tbody>
+    </table>
+
+    <a href="{{ path('app_location_new') }}">Create new</a>
+{% endblock %}

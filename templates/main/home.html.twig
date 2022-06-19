@@ -1,0 +1,135 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Hello MainController!{% endblock %}
+
+{% block body %}
+    <main>
+
+  <div id="myCarousel" class="carousel slide" data-bs-ride="carousel">
+    <div class="carousel-indicators">
+      <button type="button" data-bs-target="#myCarousel" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+      <button type="button" data-bs-target="#myCarousel" data-bs-slide-to="1" aria-label="Slide 2"></button>
+      <button type="button" data-bs-target="#myCarousel" data-bs-slide-to="2" aria-label="Slide 3"></button>
+    </div>
+    <div class="carousel-inner">
+      <div class="carousel-item active">
+        <svg class="bd-placeholder-img" width="100%" height="100%" ><img src="{{ asset('images/tableau_voiture.jpeg')}}" alt=""></svg>
+
+        <div class="container">
+          <div class="carousel-caption text-start">
+          
+            <h1>Loca-L'auto</h1>
+            <p>Le Meilleur pour les Meilleur</p>
+            <p><a class="btn btn-lg btn-secondary" href="#">Contact-nous</a></p>
+          </div>
+        </div>
+      </div>
+      <div class="carousel-item">
+        <svg class="bd-placeholder-img" width="100%" height="100%"><img src="{{ asset('images/coverture.webp')}}" alt=""></svg>
+
+        <div class="container">
+          <div class="carousel-caption">
+            <h1>Another example headline.</h1>
+            <p>Some representative placeholder content for the second slide of the carousel.</p>
+            <p><a class="btn btn-lg btn-secondary" href="#">Learn more</a></p>
+          </div>
+        </div>
+      </div>
+      <div class="carousel-item">
+        <svg class="bd-placeholder-img" width="100%" height="100%"><img src="{{ asset('images/mercedes_light.webp')}}" alt=""></svg>
+
+        <div class="container">
+          <div class="carousel-caption text-end">
+            <h1>Catégories</h1>
+            <p>pour satisfaire vous besoin notre Entreprise repondera a tout vos besoins </p>
+            <p><a class="btn btn-lg btn-secondary" href="#">Decouvrir</a></p>
+          </div>
+        </div>
+      </div>
+    </div>
+    <button class="carousel-control-prev" type="button" data-bs-target="#myCarousel" data-bs-slide="prev">
+      <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+      <span class="visually-hidden">Previous</span>
+    </button>
+    <button class="carousel-control-next" type="button" data-bs-target="#myCarousel" data-bs-slide="next">
+      <span class="carousel-control-next-icon" aria-hidden="true"></span>
+      <span class="visually-hidden">Next</span>
+    </button>
+  </div>
+
+
+  <!-- Marketing messaging and featurettes
+  ================================================== -->
+  <!-- Wrap the rest of the page in another container to center all the content. -->
+
+  <div class="container marketing">
+
+    <!-- Three columns of text below the carousel -->
+    <div class="row">
+      <div class="col-lg-4">
+        <svg class="bd-placeholder-img rounded-circle" width="140px" height="140px"><img class="contImg" src="{{ asset('images/mercedes.jpg')}}" width="140px" height="140px"  alt=""></svg>
+
+        <h2>Catégories</h2>
+        <p>pour satisfaire vous besoin notre Entreprise repondera a tout vos besoins </p>
+        <p><a class="btn btn-secondary" href="#">Decouvrir &raquo;</a></p>
+      </div><!-- /.col-lg-4 -->
+      <div class="col-lg-4">
+       <svg class="bd-placeholder-img rounded-circle" width="140px" height="140px"><img class="contImg" src="{{ asset('images/voyage.jpg')}}" width="140px" height="140px"  alt=""></svg>
+
+        <h2>Circuits</h2>
+        <p>Notre equipe vous propose des circuits bien programmé pour bien profiter de votre séjours </p>
+        <p><a class="btn btn-secondary" href="{{ path('app_Circuit') }}">Voir Détails &raquo;</a></p>
+      </div><!-- /.col-lg-4 -->
+      <div class="col-lg-4">
+        <svg class="bd-placeholder-img rounded-circle" width="140px" height="140px"><img class="contImg" src="{{ asset('images/agence.jpg')}}" width="140px" height="140px"  alt=""></svg>
+
+        <h2>Nos Agence</h2>
+        <p>Pour etre proche de nos cher clients on a crée plus de 16 agences dans les grandes villes de France </p>
+        <p><a class="btn btn-secondary" href="{{ path('app_adresse') }}">voir details &raquo;</a></p>
+      </div><!-- /.col-lg-4 -->
+    </div><!-- /.row -->
+
+
+    <!-- START THE FEATURETTES -->
+
+    <hr class="featurette-divider">
+
+    <div class="row featurette">
+      <div class="col-md-7">
+        <h2 class="featurette-heading">Louez électrique <span class="text-muted">Nouvelle expérience</span></h2>
+        <p class="lead">Moins d'emission, meme standars de qualité</p>
+      </div>
+      <div class="col-md-5">
+        <svg class="bd-placeholder-img bd-placeholder-img-lg featurette-image img-fluid mx-auto" width="500" height="500"><img class="contImg" src="{{ asset('images/tesla.jpeg')}}" width="500px" height="500px"  alt=""></svg>
+
+      </div>
+    </div>
+
+    <hr class="featurette-divider">
+
+    <div class="row featurette">
+      <div class="col-md-7 order-md-2">
+        <h2 class="featurette-heading">Oh yeah, it’s that good. <span class="text-muted"></span></h2>
+        <p class="lead">Another featurette? Of course. More placeholder content here to give you an idea of how this layout would work with some actual real-world content in place.</p>
+      </div>
+      <div class="col-md-5 order-md-1">
+        <svg class="bd-placeholder-img bd-placeholder-img-lg featurette-image img-fluid mx-auto" width="500" height="500"><img class="contImg" src="{{ asset('images/tesla.jpeg')}}" width="500px" height="500px"  alt=""></svg>
+
+      </div>
+    </div>
+
+    <hr class="featurette-divider">
+
+  
+    <!-- /END THE FEATURETTES -->
+
+  </div><!-- /.container -->
+
+
+</main>
+
+{% endblock %}
+{% block footer %}
+    {% include "footer.html.twig" %}
+
+{% endblock %}
